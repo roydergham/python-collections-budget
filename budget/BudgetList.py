@@ -23,8 +23,12 @@ class BudgetList():
             self.overages.append(item)
             self.sum_overages+=item
 
+    # Create an iterable that combines self.expenses and self.overages
+    # Create two local iterators for our internal lists using the default list iterator.
     def __iter__(self):
-
+        self.iter_e = iter(self.expenses)
+        self.iter_o = iter(self.overages)
+        return self
 
 
 
