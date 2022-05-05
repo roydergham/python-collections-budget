@@ -23,6 +23,9 @@ class BudgetList():
             self.overages.append(item)
             self.sum_overages+=item
 
+    def __iter__(self)
+
+
 
     
 def main():
