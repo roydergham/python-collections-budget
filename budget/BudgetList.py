@@ -9,7 +9,10 @@ class BudgetList():
         self.sum_overages = 0
         self.overages = []
     
- # implement append so that it only appends to self if total < budget
+    def __len__(self):
+        return (len(self.expenses) + len(self.overages))
+
+    # implement append so that it only appends to self if total < budget
     def append(self, item):
         # TODO Check if item is a number
         if (self.sum_expenses+item < self.budget):
@@ -20,8 +23,7 @@ class BudgetList():
             self.overages.append(item)
             self.sum_overages+=item
 
-     def __len__(self):
-        return (len(self.expenses) + len(self.overages))
+
     
 def main():
     # Using above class
